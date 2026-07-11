@@ -5,7 +5,7 @@
 <h1 align="center">Pimp My EmuDroid</h1>
 
 <p align="center">
-  <b>A single-file TUI that stands up a KVM-accelerated Android pentest lab in QEMU — Frida &amp; Burp ready.</b><br>
+  <b>A single file TUI that stands up a KVM accelerated Android pentest lab in QEMU. Frida &amp; Burp ready.</b><br>
   <sub>by <a href="https://github.com/archnexus707">archnexus707</a> · for authorized security testing &amp; education only</sub>
 </p>
 
@@ -20,21 +20,21 @@
 
 ## What it does
 
-`pimp-my-emudroid.sh` is **one self-contained Bash script** with a geeky terminal UI (figlet
-banner, truecolor gradients, arrow-key menus, animated system scan). It provisions and wires up
+`pimp-my-emudroid.sh` is **one self contained Bash script** with a geeky terminal UI (figlet
+banner, truecolor gradients, arrow key menus, animated system scan). It provisions and wires up
 the whole Android pentest lab for you:
 
-- 🔍 **System scan + recommendation** — reads CPU / RAM / KVM / disk and picks the best-fitting
+- 🔍 **System scan + recommendation** — reads CPU / RAM / KVM / disk and picks the best fitting
   Android image **and** VM RAM/CPU for your machine.
 - 🩺 **Dependency Doctor** — checks qemu, adb, aapt, openssl, frida, jadx, apktool… and installs
   what's missing (apt + pipx), only with your consent.
 - 📀 **Provision** — downloads an official Android-x86 ISO and builds a qcow2 disk.
-- ⚡ **Unattended auto-installer** — drives Android-x86's `AUTO_INSTALL` boot path, zero manual menus.
-- 🎯 **Frida setup** — installs frida-tools (16.x, script-compatible) + the exact version-matched
-  `frida-server`, and drops in a universal SSL-unpinning script.
+- ⚡ **Unattended auto installer** — drives Android-x86's `AUTO_INSTALL` boot path, zero manual menus.
+- 🎯 **Frida setup** — installs frida-tools (16.x, script compatible) + the exact version matched
+  `frida-server`, and drops in a universal SSL unpinning script.
 - 🔐 **Burp CA + proxy** — installs your Burp cert into a running VM's system store and sets the proxy.
 - 🔬 **APK static analysis** — badging, signing, manifest risk flags, exported components,
-  dangerous permissions, hardcoded-secret hunting. **100% local.**
+  dangerous permissions, hardcoded secret hunting. **100% local.**
 - ❤️ **Health check**, 💾 **snapshot manager**, 🎨 **themes** (neon / matrix / synthwave),
   config persistence, cleanup.
 
@@ -52,7 +52,7 @@ Android-x86 running in QEMU while Burp decrypts its HTTPS traffic:
 
 - Linux with **apt** (Kali / Debian / Ubuntu / Parrot)
 - CPU virtualization (VT-x / AMD-V) + **KVM** for acceleration (works without — just slow)
-- An interactive 256-color / truecolor terminal
+- An interactive 256 color / truecolor terminal
 - `sudo` (only used when you approve dependency installs)
 
 Everything else the **Dependency Doctor** can install for you.
@@ -102,7 +102,7 @@ When you provision an image, the tool writes these into your lab directory (you 
 |---|---|
 | `pme-install-<img>.sh` | one-time manual installer (ISO + disk) |
 | `pme-run-<img>.sh`     | boot the installed VM; forwards `:5555` for adb |
-| `pme-connect.sh`       | post-boot: adb connect, root, frida-server, port-forward, keep screen awake |
+| `pme-connect.sh`       | post boot: adb connect, root, start frida-server, port forward, keep screen awake |
 
 ## What it downloads
 
