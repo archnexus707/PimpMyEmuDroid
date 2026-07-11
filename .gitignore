@@ -1,0 +1,25 @@
+# Runtime lab data — never commit these to the public repo
+*.iso
+*.qcow2
+frida-server-*
+pme-install-*.sh
+pme-run-*.sh
+pme-connect.sh
+apk-reports/
+*.jadx/
+
+# Certs / secrets
+*.pem
+*.der
+*.0
+android_burp
+.pme_burp.pem
+.pme_boot/
+
+# Local config / logs
+.accepted
+*.log
+
+# OS / editor cruft
+.DS_Store
+*.swp
