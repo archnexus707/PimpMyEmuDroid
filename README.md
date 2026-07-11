@@ -16,6 +16,10 @@
   <img alt="version" src="https://img.shields.io/badge/version-1.1.1-blueviolet">
 </p>
 
+<p align="center">
+  <img src="assets/demo.gif" alt="Pimp My EmuDroid live TUI — scan &amp; recommendation" width="720">
+</p>
+
 ---
 
 ## What it does
